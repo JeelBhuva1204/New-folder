@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <div class="container-1"> 
+        <form action="/review" method="post">       
+            <label for="Enter your name" id="label">Enter your name:-</label>
+            <input type="text" placeholder="Enter name..." id="input" class="name" name="name"><br>
+            <label for="Enter your phone number" id="label">Enter Phone number:-</label>
+            <input type="text" placeholder="Enter phone number..." id="input" class="number" name="phone_number"><br>
+            <label for="Enter your E-mail" id="label">Enter your E-mail:-</label>
+            <input type="text" placeholder="Enter E-mail..." id="input" class="email" name="email">
+            <textarea name="feedback" id="text" cols="60" rows="10" placeholder="Enter Your Feedback..."></textarea>
+            <button type="submit" class="btn"> SUBMIT </button>
+            <a href="/" class="restart-button ">Restart Game</a>
+        </form>
+    </div>
+    <script>
+          var wasCorrect = "<%= locals.wasCorrect %>";
+            console.log(wasCorrect)
+            if (!wasCorrect) {
+                alert('Game over! Final best score: <%= locals.totalScore %>');
+            }
+    </script>
+</body>
+</html>
