@@ -1,22 +1,20 @@
 body {
-  background-image: url(../images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: Arial, sans-serif;
+  margin: 0%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  max-width: 40%;
-  height: 300px;
-  margin: 15% auto;
+  max-width: 100%;
+  height: 700px;
   padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding-top: 10px;
+  background: linear-gradient(to right,rgba(243, 243, 142, 0.785),rgba(252, 252, 77, 0.626),rgba(155, 155, 34, 0.714));
+
 }
 
 h1 {
@@ -46,7 +44,7 @@ button {
   letter-spacing: 2px;
   font-size: large;
   display: block;
-  width: 100%;
+  width: 20%;
   padding: 10px;
   background-color: #ffca00;
   color: white;
@@ -167,4 +165,78 @@ textarea{
 .email{
   position: relative;
   margin-left: 3.4%;
+}
+@media (max-width: 376px) {
+.container{
+    width: 89.4%;
+    height:604px;
+    }
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  input {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+    width: 50%;
+    margin-left: 26%;
+  }
+  
+  .horizontal-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #result {
+    font-size: 18px;
+  }
+  .restart-button {
+    width: 80%;
+    top: 0;
+    left: 0;
+    margin: 20px auto;
+  }
+
+  .container-1 {
+    flex-direction: column;
+  } 
+
+  #input,
+  #label,
+  textarea {
+    top: 0;
+    left: 0;
+    width: 70%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  .btn {
+    width: 80%;
+    top: 0;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .number,
+  .name,
+  .email {
+    left: 0;
+    margin-left: 0;
+    text-align: center;
+  }
 }
